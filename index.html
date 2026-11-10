@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colca Trek | Turismo de Aventura</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">COLCA TREK</div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#itinerarios">Itinerarios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Cotización</a>
+    </nav>
+</header>
+
+<!-- PORTADA -->
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <span class="tag">AVENTURA EN AREQUIPA</span>
+
+        <h1>Descubre la magia del Cañón del Colca</h1>
+
+        <p>
+            Vive una experiencia inolvidable entre montañas,
+            paisajes naturales y el impresionante vuelo del cóndor.
+        </p>
+
+        <a href="#paquetes" class="btn">Explorar excursiones</a>
+    </div>
+</section>
+
+<!-- PAQUETES -->
+<section id="paquetes">
+    <h2 class="section-title">Nuestros paquetes turísticos</h2>
+    <p class="subtitle">Elige tu próxima aventura.</p>
+
+    <div class="cards">
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+                 alt="Paisaje de montañas">
+
+            <div class="card-content">
+                <h3>Aventura de 1 día</h3>
+                <p>
+                    Visita Chivay, la Cruz del Cóndor y
+                    los principales miradores del valle.
+                </p>
+                <strong class="price">Desde S/ 150</strong>
+                <button class="btn reservar" data-paquete="1 día">
+                    Solicitar información
+                </button>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027"
+                 alt="Paisaje natural">
+
+            <div class="card-content">
+                <h3>Aventura de 2 días</h3>
+                <p>
+                    Explora el valle, visita pueblos tradicionales
+                    y disfruta de las aguas termales.
+                </p>
+                <strong class="price">Desde S/ 280</strong>
+                <button class="btn reservar" data-paquete="2 días">
+                    Solicitar información
+                </button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- ITINERARIOS -->
+<section class="itinerarios" id="itinerarios">
+    <h2 class="section-title">Nuestros itinerarios</h2>
+
+    <div class="day">
+        <h3>Excursión de 1 día</h3>
+        <p>
+            03:00 AM - Salida desde Arequipa.<br>
+            06:30 AM - Desayuno en Chivay.<br>
+            08:30 AM - Visita a la Cruz del Cóndor.<br>
+            11:00 AM - Recorrido por miradores.<br>
+            01:00 PM - Almuerzo.<br>
+            05:00 PM - Retorno a Arequipa.
+        </p>
+    </div>
+
+    <div class="day">
+        <h3>Excursión de 2 días</h3>
+        <p>
+            <b>Día 1:</b> Salida desde Arequipa, visita a Chivay,
+            miradores y aguas termales.<br><br>
+            <b>Día 2:</b> Visita a la Cruz del Cóndor,
+            recorrido por pueblos tradicionales y retorno.
+        </p>
+    </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria">
+    <h2 class="section-title">Galería de aventuras</h2>
+    <p class="subtitle">Conoce los paisajes que te esperan.</p>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" alt="Montañas">
+        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027" alt="Naturaleza">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Paisaje">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Lago">
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonios">
+    <h2 class="section-title">Experiencias de nuestros viajeros</h2>
+
+    <div class="cards">
+
+        <article class="testimonial">
+            <h3>★★★★★</h3>
+            <p>"Una experiencia increíble. Los paisajes del Colca son impresionantes."</p>
+            <strong>María G. - Perú</strong>
+        </article>
+
+        <article class="testimonial">
+            <h3>★★★★★</h3>
+            <p>"El vuelo del cóndor fue uno de los mejores momentos de nuestro viaje."</p>
+            <strong>Thomas R. - Alemania</strong>
+        </article>
+
+        <article class="testimonial">
+            <h3>★★★★★</h3>
+            <p>"Una aventura maravillosa para conocer la cultura de Arequipa."</p>
+            <strong>Lucía M. - Perú</strong>
+        </article>
+
+    </div>
+</section>
+
+<!-- FORMULARIO -->
+<section class="contacto" id="contacto">
+
+    <h2 class="section-title">Solicita tu cotización</h2>
+    <p class="subtitle">Completa tus datos y prepara tu aventura.</p>
+
+    <form id="formCotizacion">
+
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" required maxlength="100"
+               placeholder="Tu nombre">
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" required maxlength="150"
+               placeholder="ejemplo@gmail.com">
+
+        <label for="paquete">Paquete turístico</label>
+        <select id="paquete" required>
+            <option value="">Selecciona un paquete</option>
+            <option value="1 día">Excursión de 1 día</option>
+            <option value="2 días">Excursión de 2 días</option>
+        </select>
+
+        <label for="personas">Número de viajeros</label>
+        <input type="number" id="personas" min="1" max="30"
+               value="1" required>
+
+        <label for="fecha">Fecha del viaje</label>
+        <input type="date" id="fecha" required>
+
+        <label for="comentarios">Comentarios adicionales</label>
+        <textarea id="comentarios" maxlength="1000"
+                  placeholder="Escribe tus consultas..."></textarea>
+
+        <button type="submit" class="btn" id="btnEnviar">
+            Enviar cotización
+        </button>
+
+        <div id="mensaje" role="status" aria-live="polite"></div>
+
+    </form>
+</section>
+
+<footer>
+    <h2>COLCA TREK</h2>
+    <p>Vive la aventura. Descubre Arequipa.</p>
+    <p>Turismo de aventura en el Cañón del Colca.</p>
+    <p>© 2026 Colca Trek - Todos los derechos reservados.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

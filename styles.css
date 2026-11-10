@@ -1,0 +1,321 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f8f5;
+    color: #24352e;
+}
+
+/* ENCABEZADO */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #163b30;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e9bd68;
+}
+
+/* PORTADA */
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    padding: 10% 8%;
+    color: white;
+    background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.60)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.tag {
+    color: #f2c36c;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    background: #d49b42;
+    color: #172c24;
+    padding: 14px 23px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #efbd69;
+    transform: translateY(-2px);
+}
+
+/* SECCIONES */
+section {
+    padding: 85px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: #174536;
+}
+
+.subtitle {
+    text-align: center;
+    color: #69766e;
+    margin-bottom: 40px;
+}
+
+/* TARJETAS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000012;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 23px;
+}
+
+.card h3 {
+    color: #174536;
+    margin-bottom: 12px;
+}
+
+.card p {
+    line-height: 1.6;
+    color: #65736b;
+    margin-bottom: 18px;
+}
+
+.price {
+    display: block;
+    color: #bd842c;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.card .btn {
+    width: 100%;
+}
+
+/* ITINERARIOS */
+.itinerarios {
+    background: #eaf0e9;
+}
+
+.day {
+    background: white;
+    padding: 25px;
+    margin: 18px auto;
+    max-width: 750px;
+    border-left: 5px solid #d49b42;
+    border-radius: 7px;
+    line-height: 1.9;
+}
+
+/* GALERÍA */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* TESTIMONIOS */
+.testimonios {
+    background: #eaf0e9;
+}
+
+.testimonial {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px #00000010;
+    line-height: 1.8;
+}
+
+.testimonial h3 {
+    color: #d49b42;
+}
+
+/* CONTACTO */
+.contacto {
+    background: #173d31;
+}
+
+.contacto .section-title {
+    color: white;
+}
+
+.contacto .subtitle {
+    color: #dce9df;
+}
+
+#formCotizacion {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    color: #24352e;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 9px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+#formCotizacion .btn {
+    width: 100%;
+}
+
+#mensaje {
+    margin-top: 18px;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    background: #102a22;
+    color: white;
+    padding: 35px;
+    line-height: 2;
+}
+
+/* MÓVILES */
+@media (max-width: 750px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 650px;
+        padding: 120px 7% 50px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
